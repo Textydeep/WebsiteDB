@@ -6,7 +6,7 @@
   <title>Deepayan Banik</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=oso-variable&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #ffffff;
@@ -18,7 +18,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'oso-variable', sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
       background: var(--bg);
       color: var(--fg);
       min-height: 100vh;
@@ -31,7 +31,7 @@
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      background: var(--bg);
+      background: #111111;
       z-index: 100;
     }
 
@@ -42,16 +42,17 @@
     }
 
     .site-name {
-      font-family: 'oso-variable', sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
       font-size: 1.4rem;
       font-weight: 400;
       letter-spacing: 0.02em;
+      color: #ffffff;
     }
 
     .site-tagline {
-      font-family: 'oso-variable', sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
       font-size: 0.78rem;
-      color: var(--muted);
+      color: rgba(255,255,255,0.55);
       margin-top: 0.2rem;
       margin-bottom: 1.4rem;
       letter-spacing: 0.04em;
@@ -60,21 +61,21 @@
     nav { display: flex; gap: 2rem; }
 
     .tab-btn {
-      font-family: 'oso-variable', sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
       font-size: 0.78rem;
       letter-spacing: 0.06em;
       background: none;
       border: none;
       border-bottom: 1px solid transparent;
-      color: var(--muted);
+      color: rgba(255,255,255,0.55);
       padding: 0.4rem 0;
       cursor: pointer;
       transition: color 0.15s, border-color 0.15s;
       margin-bottom: -1px;
     }
 
-    .tab-btn:hover { color: var(--fg); }
-    .tab-btn.active { color: var(--fg); border-bottom-color: var(--fg); }
+    .tab-btn:hover { color: #ffffff; }
+    .tab-btn.active { color: #ffffff; border-bottom-color: #ffffff; }
 
     /* ── MAIN ── */
     main {
@@ -109,7 +110,6 @@
     }
 
     .bio-label {
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.68rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -118,7 +118,6 @@
     }
 
     .bio p {
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.92rem;
       line-height: 1.78;
       color: var(--fg);
@@ -131,7 +130,6 @@
       margin-top: 2rem;
       padding-top: 1.2rem;
       border-top: 1px solid var(--border);
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.83rem;
       line-height: 1.65;
       color: var(--muted);
@@ -139,7 +137,6 @@
 
     /* ── SHARED LABEL ── */
     .section-label {
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.68rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -147,14 +144,47 @@
       margin: 2.5rem 0 1rem;
     }
 
-    /* ── RESEARCH ── */
-    .research-intro {
-      font-family: 'oso-variable', sans-serif;
-      font-size: 0.92rem;
-      line-height: 1.78;
-      color: var(--fg);
+    /* ── RESEARCH AREAS ── */
+    .research-areas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
     }
 
+    .research-area-card {
+      background: var(--bg);
+      padding: 1.2rem 1.1rem;
+      cursor: pointer;
+      transition: background 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .research-area-card:hover { background: #f7f7f7; }
+
+    .research-area-card h4 {
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    .research-area-card p {
+      font-size: 0.78rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .area-arrow {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: auto;
+      padding-top: 0.6rem;
+    }
+
+    /* ── KEYWORDS ── */
     .tags-strip {
       display: flex;
       flex-wrap: wrap;
@@ -162,7 +192,6 @@
     }
 
     .tags-strip span {
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.73rem;
       color: var(--muted);
       border: 1px solid var(--border);
@@ -170,53 +199,27 @@
       border-radius: 2px;
     }
 
-    .research-areas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .research-area-card h4 {
-      font-family: 'oso-variable', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.45rem;
-    }
-
-    .research-area-card p {
-      font-family: 'oso-variable', sans-serif;
-      font-size: 0.8rem;
-      line-height: 1.65;
-      color: var(--muted);
-    }
-
-    /* Projects */
-    .project-group { margin-bottom: 1rem; }
+    /* ── PROJECTS ── */
+    .project-group { margin-bottom: 1.4rem; }
 
     .project-group-label {
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.68rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
     }
 
     .project-list { list-style: none; }
 
     .project-list li {
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.86rem;
       line-height: 1.6;
       color: var(--fg);
-      padding: 0.3rem 0;
-      border-bottom: 1px solid var(--border);
+      padding: 0.28rem 0;
     }
 
-    .project-list li:first-child { border-top: 1px solid var(--border); }
-
-    /* Publications */
+    /* ── PUBLICATIONS ── */
     .pub-list { list-style: none; }
 
     .pub-list li {
@@ -228,7 +231,6 @@
 
     .pub-title {
       display: block;
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.88rem;
       line-height: 1.5;
       margin-bottom: 0.25rem;
@@ -236,7 +238,6 @@
 
     .pub-authors {
       display: block;
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.76rem;
       color: var(--muted);
       margin-bottom: 0.15rem;
@@ -244,15 +245,76 @@
 
     .pub-venue {
       display: block;
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.73rem;
       color: var(--muted);
-      letter-spacing: 0.02em;
     }
+
+    /* ── DETAIL PAGE ── */
+    .detail-page {
+      display: none;
+      animation: fadeIn 0.2s ease;
+    }
+
+    .detail-page.active { display: block; }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.73rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-bottom: 2rem;
+      transition: color 0.15s;
+    }
+
+    .back-btn:hover { color: var(--fg); }
+
+    .detail-title {
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-section-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 2rem 0 0.8rem;
+    }
+
+    .detail-body {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--fg);
+      margin-bottom: 1rem;
+    }
+
+    .detail-pub-list { list-style: none; }
+
+    .detail-pub-list li {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-pub-list li:first-child { border-top: 1px solid var(--border); }
 
     /* ── CONTACT ── */
     #contact > p {
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.88rem;
       line-height: 1.72;
       color: var(--muted);
@@ -266,7 +328,6 @@
     }
 
     .contact-table td {
-      font-family: 'oso-variable', sans-serif;
       padding: 0.75rem 0;
       border-bottom: 1px solid var(--border);
       font-size: 0.86rem;
@@ -293,9 +354,7 @@
 
     .contact-table a:hover { border-color: var(--fg); }
 
-    /* Form */
     .contact-form h3 {
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.68rem;
       font-weight: 400;
       letter-spacing: 0.12em;
@@ -306,7 +365,6 @@
 
     .contact-form label {
       display: block;
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.68rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -321,7 +379,7 @@
       border: 1px solid var(--border);
       border-radius: 0;
       padding: 0.6rem 0.75rem;
-      font-family: 'oso-variable', sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
       font-size: 0.86rem;
       color: var(--fg);
       margin-bottom: 1.2rem;
@@ -336,7 +394,6 @@
 
     .field-error {
       display: block;
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.72rem;
       color: #bb0000;
       margin-top: -0.9rem;
@@ -349,7 +406,7 @@
       color: var(--bg);
       border: none;
       padding: 0.65rem 1.8rem;
-      font-family: 'oso-variable', sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
       font-size: 0.72rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -361,7 +418,6 @@
 
     #form-status {
       margin-top: 0.8rem;
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.8rem;
       color: var(--muted);
     }
@@ -370,7 +426,6 @@
     footer {
       text-align: center;
       padding: 1.5rem;
-      font-family: 'oso-variable', sans-serif;
       font-size: 0.7rem;
       letter-spacing: 0.05em;
       color: var(--muted);
@@ -402,14 +457,10 @@
 
   <main>
 
-    <!-- Home Tab -->
+    <!-- ══ HOME ══ -->
     <section id="home" class="tab-content active">
       <div class="card">
-        <img
-          src="https://via.placeholder.com/100"
-          alt="Profile photo of Deepayan Banik"
-          class="avatar"
-        />
+        <img src="https://via.placeholder.com/100" alt="Profile photo of Deepayan Banik" class="avatar" />
         <div class="bio">
           <p class="bio-label">About</p>
           <p>
@@ -435,123 +486,271 @@
       </div>
     </section>
 
-    <!-- Research Tab -->
+    <!-- ══ RESEARCH ══ -->
     <section id="research" class="tab-content">
 
-      <p class="research-intro">
-        Navigating through engineering and physics educational backgrounds,
-        interdisciplinarity lies at the core of my research. I am interested in
-        mathematical modeling of natural phenomena, with recent work revolving
-        around the mechanics of planetary and stellar scale astrophysical phenomena.
-      </p>
+      <!-- Research area grid -->
+      <div id="research-overview">
 
-      <p class="section-label">Keywords</p>
-      <div class="tags-strip">
-        <span>fluid mechanics</span>
-        <span>turbulence</span>
-        <span>magnetic fields</span>
-        <span>mixing</span>
-        <span>convection</span>
-        <span>stratification</span>
-        <span>shallow water</span>
-        <span>general circulation</span>
-        <span>primitive equations</span>
-        <span>wave–mean-flow interactions</span>
+        <p class="section-label" style="margin-top:0">Research Areas</p>
+        <div class="research-areas">
+          <div class="research-area-card" onclick="openDetail('stars')">
+            <h4>Stars</h4>
+            <p>Differential rotation and meridional circulation in stellar interiors.</p>
+            <span class="area-arrow">View details →</span>
+          </div>
+          <div class="research-area-card" onclick="openDetail('planets')">
+            <h4>Planets</h4>
+            <p>Exoplanetary climate physics and atmospheric circulation.</p>
+            <span class="area-arrow">View details →</span>
+          </div>
+          <div class="research-area-card" onclick="openDetail('asteroids')">
+            <h4>Asteroids</h4>
+            <p>Spin and shape evolution of rubble-pile asteroids.</p>
+            <span class="area-arrow">View details →</span>
+          </div>
+          <div class="research-area-card" onclick="openDetail('misc')">
+            <h4>Miscellaneous</h4>
+            <p>Mechanical logic gates and LLM evaluation in physics.</p>
+            <span class="area-arrow">View details →</span>
+          </div>
+        </div>
+
+        <p class="section-label">Keywords</p>
+        <div class="tags-strip">
+          <span>fluid mechanics</span>
+          <span>turbulence</span>
+          <span>magnetic fields</span>
+          <span>mixing</span>
+          <span>convection</span>
+          <span>stratification</span>
+          <span>shallow water</span>
+          <span>general circulation</span>
+          <span>primitive equations</span>
+          <span>wave–mean-flow interactions</span>
+        </div>
+
+        <p class="section-label">Projects</p>
+        <div class="project-group">
+          <div class="project-group-label">Current</div>
+          <ul class="project-list">
+            <li>Wave driven Hot-Jupiter variability</li>
+            <li>Atmospheric circulation of variably irradiated synchronous and asynchronous planets</li>
+            <li>Exoplanet magnetic fields using high-resolution phase-resolved cross-correlation spectroscopy</li>
+          </ul>
+        </div>
+        <div class="project-group">
+          <div class="project-group-label">Recent</div>
+          <ul class="project-list">
+            <li>Beating climates of variably irradiated asynchronous exoplanets</li>
+            <li>Rotational mixing in stellar and planetary interiors</li>
+            <li>Meridional circulation in stratified environments</li>
+          </ul>
+        </div>
+        <div class="project-group">
+          <div class="project-group-label">Past</div>
+          <ul class="project-list">
+            <li>Spin and shape evolution of rubble-piles</li>
+            <li>Continuum regolith flows on top-shaped asteroids</li>
+            <li>Discrete granular flow on a rotating and gravitating ellipse</li>
+            <li>Mechanical logic gates</li>
+          </ul>
+        </div>
+
+        <p class="section-label">Publications</p>
+        <ol class="pub-list">
+          <li>
+            <span class="pub-title">Meridional Circulation Molecular-Weighted</span>
+            <span class="pub-authors">D Banik, K Menou, E H Anders</span>
+            <span class="pub-venue">The Astrophysical Journal · 2025</span>
+          </li>
+          <li>
+            <span class="pub-title">Planetary Rhythms: Synchronous Circulation on Variably Irradiated Asynchronous Planets</span>
+            <span class="pub-authors">D Banik (solo author)</span>
+            <span class="pub-venue">The Astrophysical Journal · 2025</span>
+          </li>
+          <li>
+            <span class="pub-title">Meridional Circulation Streamlined</span>
+            <span class="pub-authors">D Banik, K Menou</span>
+            <span class="pub-venue">Geophysical and Astrophysical Fluid Dynamics · 2024</span>
+          </li>
+          <li>
+            <span class="pub-title">Regolith Flow on Top-Shaped Asteroids</span>
+            <span class="pub-authors">D Banik, K Gaurav, I Sharma</span>
+            <span class="pub-venue">Proceedings of the Royal Society A · 2022</span>
+          </li>
+          <li>
+            <span class="pub-title">Spin Change of Rubble-Piles Due to Mass Shedding Culminating from Surface Motion</span>
+            <span class="pub-authors">D Banik, K Gaurav</span>
+            <span class="pub-venue">Lunar and Planetary Science Conference · 2021</span>
+          </li>
+          <li>
+            <span class="pub-title">Granular Flow on a Rotating and Gravitating Elliptical Body</span>
+            <span class="pub-authors">K Gaurav, D Banik, I Sharma</span>
+            <span class="pub-venue">Journal of Fluid Mechanics · 2021</span>
+          </li>
+          <li>
+            <span class="pub-title">A Mechanical OR Gate Using Pinned-Pinned Bistable Arches</span>
+            <span class="pub-authors">D Banik, S Palathingal, G Ananthasuresh, A Ghosh</span>
+            <span class="pub-venue">Mechanism and Machine Science · 2020</span>
+          </li>
+          <li>
+            <span class="pub-title">Humanities Last Exam</span>
+            <span class="pub-authors">Several authors including D Banik</span>
+            <span class="pub-venue">arXiv · 2025</span>
+          </li>
+        </ol>
       </div>
 
-      <p class="section-label">Research Areas</p>
-      <div class="research-areas">
-        <div class="research-area-card">
-          <h4>Stars</h4>
-          <p>Differential rotation and meridional circulation in stellar interiors using theoretical and computational fluid dynamics.</p>
-        </div>
-        <div class="research-area-card">
-          <h4>Planets</h4>
-          <p>Exoplanetary climate physics via shallow water models; high-resolution spectroscopy to probe ultra-hot Jupiters for magnetic fields.</p>
-        </div>
-        <div class="research-area-card">
-          <h4>Asteroids</h4>
-          <p>Spin and shape evolution of rubble-pile asteroids using discrete and continuum granular flow methods, focused on bodies like Bennu and Ryugu.</p>
-        </div>
-        <div class="research-area-card">
-          <h4>Miscellaneous</h4>
-          <p>Theoretical design of mechanical logic gates using bistable arches; LLM evaluation tests in physics.</p>
-        </div>
+      <!-- ── DETAIL: STARS ── -->
+      <div id="detail-stars" class="detail-page">
+        <button class="back-btn" onclick="closeDetail()">← Back to Research</button>
+        <h2 class="detail-title">Stars</h2>
+        <p class="detail-subtitle">Stellar interiors · Fluid dynamics · Rotational mixing</p>
+
+        <p class="detail-section-label">Overview</p>
+        <p class="detail-body">
+          Standard stellar evolution models typically treat stars as rigidly-rotating, one-dimensional objects, neglecting the rich three-dimensional fluid dynamics of their interiors. In reality, stars exhibit differential rotation — where different latitudes and depths rotate at different rates — alongside large-scale meridional circulation, a slow overturning flow driven by imbalances between rotation and thermal stratification.
+        </p>
+        <p class="detail-body">
+          These flows matter because they mix chemical species across layers that would otherwise remain separate, alter angular momentum transport, and shape a star's long-term evolutionary trajectory. My work develops theoretical and computational frameworks to model these flows, going beyond the one-dimensional approximation to capture the genuine three-dimensional structure of stellar interiors.
+        </p>
+
+        <p class="detail-section-label">Key Questions</p>
+        <p class="detail-body">
+          How does meridional circulation behave in the presence of compositional gradients — for instance, when molecular weight varies across layers? How do these flows interact with convection and magnetic fields? And how can we build models that are tractable enough to be incorporated into evolutionary codes while remaining physically faithful?
+        </p>
+
+        <p class="detail-section-label">Methods</p>
+        <p class="detail-body">
+          My work uses a combination of analytic theory and numerical simulation. I construct reduced models — such as streamlined formulations of the meridional circulation equations — that capture the essential physics while remaining computationally efficient. These are validated against more complete simulations and, where possible, against observational constraints such as stellar rotation profiles from asteroseismology.
+        </p>
+
+        <p class="detail-section-label">Related Publications</p>
+        <ol class="detail-pub-list">
+          <li>
+            <span class="pub-title">Meridional Circulation Molecular-Weighted</span>
+            <span class="pub-authors">D Banik, K Menou, E H Anders</span>
+            <span class="pub-venue">The Astrophysical Journal · 2025</span>
+          </li>
+          <li>
+            <span class="pub-title">Meridional Circulation Streamlined</span>
+            <span class="pub-authors">D Banik, K Menou</span>
+            <span class="pub-venue">Geophysical and Astrophysical Fluid Dynamics · 2024</span>
+          </li>
+        </ol>
       </div>
 
-      <p class="section-label">Projects</p>
-      <div class="project-group">
-        <div class="project-group-label">Current</div>
-        <ul class="project-list">
-          <li>Wave driven Hot-Jupiter variability</li>
-          <li>Atmospheric circulation of variably irradiated synchronous and asynchronous planets</li>
-          <li>Exoplanet magnetic fields using high-resolution phase-resolved cross-correlation spectroscopy</li>
-        </ul>
-      </div>
-      <div class="project-group">
-        <div class="project-group-label">Recent</div>
-        <ul class="project-list">
-          <li>Beating climates of variably irradiated asynchronous exoplanets</li>
-          <li>Rotational mixing in stellar and planetary interiors</li>
-          <li>Meridional circulation in stratified environments</li>
-        </ul>
-      </div>
-      <div class="project-group">
-        <div class="project-group-label">Past</div>
-        <ul class="project-list">
-          <li>Spin and shape evolution of rubble-piles</li>
-          <li>Continuum regolith flows on top-shaped asteroids</li>
-          <li>Discrete granular flow on a rotating and gravitating ellipse</li>
-          <li>Mechanical logic gates</li>
-        </ul>
+      <!-- ── DETAIL: PLANETS ── -->
+      <div id="detail-planets" class="detail-page">
+        <button class="back-btn" onclick="closeDetail()">← Back to Research</button>
+        <h2 class="detail-title">Planets</h2>
+        <p class="detail-subtitle">Exoplanetary atmospheres · Climate dynamics · Magnetic fields</p>
+
+        <p class="detail-section-label">Overview</p>
+        <p class="detail-body">
+          The atmospheres of exoplanets are laboratories for extreme fluid dynamics. Planets orbiting close to their host stars can be tidally locked — always showing the same face to the star — or in higher-order spin-orbit resonances, leading to dramatic day–night temperature contrasts and complex atmospheric circulation patterns. My work focuses on understanding how these planets' climates respond to variable and asymmetric stellar irradiation.
+        </p>
+        <p class="detail-body">
+          A particular focus is on asynchronously rotating planets — worlds whose rotation period does not match their orbital period — and the rich dynamical phenomena that arise, including resonance effects, traveling waves, and the possibility of climate oscillations with observable signatures.
+        </p>
+
+        <p class="detail-section-label">Shallow Water Models</p>
+        <p class="detail-body">
+          I use shallow water models of planetary atmospheres as a tractable framework for studying general circulation. These models capture the large-scale dynamics — Rossby waves, jet streams, gyres — while being computationally accessible enough to explore broad parameter spaces. Key results from this work include the identification of "planetary rhythms": periodic climate oscillations in variably irradiated asynchronous planets driven by wave–mean-flow interactions.
+        </p>
+
+        <p class="detail-section-label">Magnetic Fields via Spectroscopy</p>
+        <p class="detail-body">
+          In a collaborative observational thread, I work on detecting magnetic fields in ultra-hot Jupiter atmospheres using high-resolution, phase-resolved cross-correlation spectroscopy. Magnetic fields can suppress circulation and influence chemical mixing, making their detection a key step toward understanding the full physics of these extreme worlds.
+        </p>
+
+        <p class="detail-section-label">Related Publications</p>
+        <ol class="detail-pub-list">
+          <li>
+            <span class="pub-title">Planetary Rhythms: Synchronous Circulation on Variably Irradiated Asynchronous Planets</span>
+            <span class="pub-authors">D Banik (solo author)</span>
+            <span class="pub-venue">The Astrophysical Journal · 2025</span>
+          </li>
+        </ol>
       </div>
 
-      <p class="section-label">Publications</p>
-      <ol class="pub-list">
-        <li>
-          <span class="pub-title">Meridional Circulation Molecular-Weighted</span>
-          <span class="pub-authors">D Banik, K Menou, E H Anders</span>
-          <span class="pub-venue">The Astrophysical Journal · 2025</span>
-        </li>
-        <li>
-          <span class="pub-title">Planetary Rhythms: Synchronous Circulation on Variably Irradiated Asynchronous Planets</span>
-          <span class="pub-authors">D Banik (solo author)</span>
-          <span class="pub-venue">The Astrophysical Journal · 2025</span>
-        </li>
-        <li>
-          <span class="pub-title">Meridional Circulation Streamlined</span>
-          <span class="pub-authors">D Banik, K Menou</span>
-          <span class="pub-venue">Geophysical and Astrophysical Fluid Dynamics · 2024</span>
-        </li>
-        <li>
-          <span class="pub-title">Regolith Flow on Top-Shaped Asteroids</span>
-          <span class="pub-authors">D Banik, K Gaurav, I Sharma</span>
-          <span class="pub-venue">Proceedings of the Royal Society A · 2022</span>
-        </li>
-        <li>
-          <span class="pub-title">Spin Change of Rubble-Piles Due to Mass Shedding Culminating from Surface Motion</span>
-          <span class="pub-authors">D Banik, K Gaurav</span>
-          <span class="pub-venue">Lunar and Planetary Science Conference · 2021</span>
-        </li>
-        <li>
-          <span class="pub-title">Granular Flow on a Rotating and Gravitating Elliptical Body</span>
-          <span class="pub-authors">K Gaurav, D Banik, I Sharma</span>
-          <span class="pub-venue">Journal of Fluid Mechanics · 2021</span>
-        </li>
-        <li>
-          <span class="pub-title">A Mechanical OR Gate Using Pinned-Pinned Bistable Arches</span>
-          <span class="pub-authors">D Banik, S Palathingal, G Ananthasuresh, A Ghosh</span>
-          <span class="pub-venue">Mechanism and Machine Science · 2020</span>
-        </li>
-        <li>
-          <span class="pub-title">Humanities Last Exam</span>
-          <span class="pub-authors">Several authors including D Banik</span>
-          <span class="pub-venue">arXiv · 2025</span>
-        </li>
-      </ol>
+      <!-- ── DETAIL: ASTEROIDS ── -->
+      <div id="detail-asteroids" class="detail-page">
+        <button class="back-btn" onclick="closeDetail()">← Back to Research</button>
+        <h2 class="detail-title">Asteroids</h2>
+        <p class="detail-subtitle">Granular flows · Rubble-pile dynamics · Shape evolution</p>
+
+        <p class="detail-section-label">Overview</p>
+        <p class="detail-body">
+          Many small bodies in the solar system — including the well-known asteroids Bennu and Ryugu — are "rubble piles": loose aggregates of rock and dust held together by self-gravity and surface friction, rather than by material strength. Their distinctive top-like shapes are thought to arise from surface mass redistribution driven by the YORP effect, a subtle radiation-induced spin-up that can trigger regolith flow and mass shedding.
+        </p>
+        <p class="detail-body">
+          My earlier work focused on modeling the granular mechanics of these processes using both discrete element methods — where each grain is tracked individually — and continuum approaches that treat the regolith as a flowing material. This dual approach allows cross-validation and provides insight into which aspects of the dynamics are captured by each method.
+        </p>
+
+        <p class="detail-section-label">Key Results</p>
+        <p class="detail-body">
+          I studied how regolith flows across the surface of a top-shaped asteroid under spin-up, showing how material migrates toward the equator and ultimately sheds, contributing to the characteristic equatorial ridge seen on Bennu and Ryugu. Companion work examined how this mass shedding feeds back to alter the spin state of the body itself.
+        </p>
+        <p class="detail-body">
+          Ongoing collaborative work extends this into population-level statistics, developing a comprehensive package for modeling asteroid evolution histories that can be compared against the observed distribution of small-body shapes in the solar system.
+        </p>
+
+        <p class="detail-section-label">Related Publications</p>
+        <ol class="detail-pub-list">
+          <li>
+            <span class="pub-title">Regolith Flow on Top-Shaped Asteroids</span>
+            <span class="pub-authors">D Banik, K Gaurav, I Sharma</span>
+            <span class="pub-venue">Proceedings of the Royal Society A · 2022</span>
+          </li>
+          <li>
+            <span class="pub-title">Spin Change of Rubble-Piles Due to Mass Shedding Culminating from Surface Motion</span>
+            <span class="pub-authors">D Banik, K Gaurav</span>
+            <span class="pub-venue">Lunar and Planetary Science Conference · 2021</span>
+          </li>
+          <li>
+            <span class="pub-title">Granular Flow on a Rotating and Gravitating Elliptical Body</span>
+            <span class="pub-authors">K Gaurav, D Banik, I Sharma</span>
+            <span class="pub-venue">Journal of Fluid Mechanics · 2021</span>
+          </li>
+        </ol>
+      </div>
+
+      <!-- ── DETAIL: MISCELLANEOUS ── -->
+      <div id="detail-misc" class="detail-page">
+        <button class="back-btn" onclick="closeDetail()">← Back to Research</button>
+        <h2 class="detail-title">Miscellaneous</h2>
+        <p class="detail-subtitle">Mechanical computing · LLM evaluation · Compliant mechanisms</p>
+
+        <p class="detail-section-label">Mechanical Logic Gates</p>
+        <p class="detail-body">
+          Before transitioning fully into astrophysics, I worked on the theoretical design and macroscale prototyping of mechanical logic gates — specifically an OR gate constructed from pinned-pinned bistable arches. These compliant mechanisms exploit elastic snap-through instability to perform binary logic without electronics, as a proof of concept for eventual miniaturization into MEMS-scale devices. This work sits at the intersection of structural mechanics, nonlinear dynamics, and mechanical engineering design.
+        </p>
+
+        <p class="detail-section-label">LLM Evaluation in Physics</p>
+        <p class="detail-body">
+          More recently, I contributed to the design of evaluation benchmarks for large language models in the domain of physics. This work probes the reasoning and knowledge limits of frontier models using carefully constructed physics problems, contributing to the broader effort to understand where LLMs succeed and fail at scientific reasoning. I was a contributor to the Humanities Last Exam dataset published on arXiv in 2025.
+        </p>
+
+        <p class="detail-section-label">Related Publications</p>
+        <ol class="detail-pub-list">
+          <li>
+            <span class="pub-title">A Mechanical OR Gate Using Pinned-Pinned Bistable Arches</span>
+            <span class="pub-authors">D Banik, S Palathingal, G Ananthasuresh, A Ghosh</span>
+            <span class="pub-venue">Mechanism and Machine Science · 2020</span>
+          </li>
+          <li>
+            <span class="pub-title">Humanities Last Exam</span>
+            <span class="pub-authors">Several authors including D Banik</span>
+            <span class="pub-venue">arXiv · 2025</span>
+          </li>
+        </ol>
+      </div>
+
     </section>
 
-    <!-- Contact Tab -->
+    <!-- ══ CONTACT ══ -->
     <section id="contact" class="tab-content">
       <p>Feel free to reach out — I am always happy to discuss research, collaborations, or questions. Undergrad and masters students are especially welcome.</p>
 
@@ -601,6 +800,7 @@
   </footer>
 
   <script>
+    // ── Tab switching ──
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const tab = btn.dataset.tab;
@@ -608,9 +808,25 @@
         document.querySelectorAll('.tab-content').forEach(s => s.classList.remove('active'));
         btn.classList.add('active');
         document.getElementById(tab).classList.add('active');
+        // Always show overview when switching to research
+        if (tab === 'research') closeDetail();
       });
     });
 
+    // ── Research detail pages ──
+    function openDetail(area) {
+      document.getElementById('research-overview').style.display = 'none';
+      document.querySelectorAll('.detail-page').forEach(d => d.classList.remove('active'));
+      document.getElementById('detail-' + area).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function closeDetail() {
+      document.querySelectorAll('.detail-page').forEach(d => d.classList.remove('active'));
+      document.getElementById('research-overview').style.display = 'block';
+    }
+
+    // ── Form validation ──
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', e => {
       e.preventDefault();
