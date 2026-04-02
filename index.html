@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <h1 class="site-name">Jane Doe</h1>
+      <p class="site-tagline">PhD Candidate · Computer Science · University of Example</p>
+      <nav>
+        <button class="tab-btn active" data-tab="home">Home</button>
+        <button class="tab-btn" data-tab="research">Research</button>
+        <button class="tab-btn" data-tab="contact">Contact</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Home Tab -->
+    <section id="home" class="tab-content active">
+      <div class="card">
+        <img
+          src="https://via.placeholder.com/120"
+          alt="Profile photo"
+          class="avatar"
+        />
+        <div class="bio">
+          <h2>About Me</h2>
+          <p>
+            Welcome! I am a PhD candidate in the Department of Computer Science at the
+            University of Example, advised by Prof. John Smith. My research lies at the
+            intersection of machine learning and human–computer interaction.
+          </p>
+          <p>
+            Before joining the PhD program I completed a Bachelor's degree in Mathematics
+            at Sample College (2020). I am passionate about building systems that are both
+            powerful and understandable by everyday users.
+          </p>
+          <p>
+            Outside of research I enjoy hiking, reading science fiction, and playing chess.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Tab -->
+    <section id="research" class="tab-content">
+      <h2>Research</h2>
+
+      <h3>Interests</h3>
+      <ul class="interest-list">
+        <li>Machine Learning &amp; Deep Learning</li>
+        <li>Human–Computer Interaction</li>
+        <li>Explainable AI</li>
+        <li>Natural Language Processing</li>
+      </ul>
+
+      <h3>Publications</h3>
+      <ol class="pub-list">
+        <li>
+          <strong>Towards Interpretable Neural Networks for HCI</strong><br />
+          <em>Jane Doe, John Smith</em><br />
+          CHI 2025 · <a href="#">PDF</a> · <a href="#">Code</a>
+        </li>
+        <li>
+          <strong>Efficient Fine-Tuning of Large Language Models</strong><br />
+          <em>Jane Doe, Alice Lee, John Smith</em><br />
+          NeurIPS 2024 · <a href="#">PDF</a> · <a href="#">Poster</a>
+        </li>
+        <li>
+          <strong>A Survey of Explainability Methods in Deep Learning</strong><br />
+          <em>Jane Doe</em><br />
+          arXiv 2023 · <a href="#">Preprint</a>
+        </li>
+      </ol>
+
+      <h3>Projects</h3>
+      <div class="project-grid">
+        <div class="project-card">
+          <h4>XAI Dashboard</h4>
+          <p>An interactive dashboard for visualising saliency maps of image classifiers in real time.</p>
+          <a href="#">GitHub ↗</a>
+        </div>
+        <div class="project-card">
+          <h4>LLM Fine-Tune Toolkit</h4>
+          <p>A lightweight Python library for parameter-efficient fine-tuning of transformer models.</p>
+          <a href="#">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Tab -->
+    <section id="contact" class="tab-content">
+      <h2>Contact</h2>
+      <p>Feel free to reach out — I am always happy to discuss research, collaborations, or questions.</p>
+
+      <table class="contact-table">
+        <tbody>
+          <tr>
+            <td class="label">Email</td>
+            <td><a href="mailto:jane.doe@example.edu">jane.doe@example.edu</a></td>
+          </tr>
+          <tr>
+            <td class="label">Office</td>
+            <td>Room 314, Gates Hall, University of Example</td>
+          </tr>
+          <tr>
+            <td class="label">Google Scholar</td>
+            <td><a href="#">scholar.google.com/jane-doe</a></td>
+          </tr>
+          <tr>
+            <td class="label">GitHub</td>
+            <td><a href="#">github.com/janedoe</a></td>
+          </tr>
+          <tr>
+            <td class="label">Twitter / X</td>
+            <td><a href="#">@janedoe_cs</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <h3>Send a Message</h3>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name"
+          required
+          aria-required="true"
+          aria-describedby="name-error"
+        />
+        <span class="field-error" id="name-error" role="alert"></span>
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+          aria-required="true"
+          aria-describedby="email-error"
+        />
+        <span class="field-error" id="email-error" role="alert"></span>
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your message…"
+          required
+          aria-required="true"
+          aria-describedby="message-error"
+        ></textarea>
+        <span class="field-error" id="message-error" role="alert"></span>
+
+        <button type="submit" class="submit-btn">Send</button>
+        <p id="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jane Doe · Built with plain HTML, CSS &amp; JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
