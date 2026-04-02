@@ -95,7 +95,7 @@
     /* ── HOME ── */
     .card {
       display: grid;
-      grid-template-columns: 110px 1fr;
+      grid-template-columns: 200px 1fr;
       gap: 2.5rem;
       align-items: start;
     }
@@ -473,7 +473,10 @@
             I am a 5th year PhD candidate in Physics at the University of Toronto.
             My main interest is geophysical and astrophysical fluid dynamics — I study
             planetary to stellar scale flows using primarily theoretical and computational,
-            and occasionally observational tools through collaborations. Navigating through engineering and physics educational backgrounds,
+            and occasionally observational tools through collaborations. 
+          </p>
+          <p>
+            Navigating through engineering and physics educational backgrounds,
             interdisciplinarity lies at the core of my research. In general, I am interested
             in mathematical modeling of physical phenomena.
           </p>
@@ -499,27 +502,27 @@
         <div class="research-areas">
           <div class="research-area-card" onclick="openDetail('stars')">
             <h4>Stars</h4>
-            <p>Differential rotation and meridional circulation in stellar interiors.</p>
+            <p>Differential rotation and meridional circulation in stellar interiors are often neglected in evolutionary models that treat stars as rigidly-rotating one dimensional objects. However, in reality they highly three dimensional with complex fluid motion that not only affect the current state of stars but also their past and future. I work on this using theoretical and computational fluid dynamics.</p>
             <span class="area-arrow">View details →</span>
           </div>
           <div class="research-area-card" onclick="openDetail('planets')">
             <h4>Planets</h4>
-            <p>Exoplanetary climate physics and atmospheric circulation.</p>
+            <p>Exoplanetary climate physics is focused on using a variety of tools. I use shallow water models of planetary atmospheres to study variably irradiated synchronous and asynchronous planets.  I also collaborate on using high resolution phase resolved spectroscopy to probe ultra hot Jupiters for magnetic fields.</p>
             <span class="area-arrow">View details →</span>
           </div>
           <div class="research-area-card" onclick="openDetail('asteroids')">
             <h4>Asteroids</h4>
-            <p>Spin and shape evolution of rubble-pile asteroids.</p>
+            <p>In the past, I have studied the spin and shape evolution of rubble-pile asteroids using discrete and continuum methods for granular flows with focus on top-shaped asteroids like Bennu and Ryugu. Current collaborative work extends into developing a comprehensive asteroid evolution history package for population statistics.</p>
             <span class="area-arrow">View details →</span>
           </div>
           <div class="research-area-card" onclick="openDetail('misc')">
             <h4>Miscellaneous</h4>
-            <p>Mechanical logic gates and LLM evaluation in physics.</p>
+            <p>Some of my old work dealt with the theoretical design of mechanical logic gates like the OR gate, using compliant bistable arches and their macroscale prototyping as a proof of concept for eventual miniaturization. I have also worked on designing tests for LLM evaluation in the field of physics.</p>
             <span class="area-arrow">View details →</span>
           </div>
         </div>
 
-        <p class="section-label">Keywords</p>
+        <!-- <p class="section-label">Keywords</p>
         <div class="tags-strip">
           <span>fluid mechanics</span>
           <span>turbulence</span>
@@ -531,7 +534,7 @@
           <span>general circulation</span>
           <span>primitive equations</span>
           <span>wave–mean-flow interactions</span>
-        </div>
+        </div> -->
 
         <p class="section-label">Projects</p>
         <div class="project-group">
@@ -755,17 +758,17 @@
 
     <!-- ══ CONTACT ══ -->
     <section id="contact" class="tab-content">
-      <p>Feel free to reach out — I am always happy to discuss research, collaborations, or questions. Undergrad and masters students are especially welcome.</p>
+      <p>Feel free to reach out to me at <a href="mailto:deepayan.banik@utoronto.ca">deepayan.banik@utoronto.ca</a> — I am always happy to discuss research, collaborations, or questions. Undergrad and masters students are especially welcome.</p>
 
       <table class="contact-table">
         <tbody>
           <tr>
             <td class="label">GitHub</td>
-            <td><a href="https://github.com/deepayanbanik" target="_blank">github.com/deepayanbanik</a></td>
+            <td><a href="https://github.com/Textydeep" target="_blank">github.com/Textydeep</a></td>
           </tr>
           <tr>
-            <td class="label">Notion</td>
-            <td><a href="https://deepayanbanik.notion.site" target="_blank">deepayanbanik.notion.site</a></td>
+            <td class="label">LinkedIn</td>
+            <td><a href="https://www.linkedin.com/in/textydeep" target="_blank">linkedin.com/in/textydeep</a></td>
           </tr>
           <tr>
             <td class="label">University</td>
@@ -774,7 +777,7 @@
         </tbody>
       </table>
 
-      <form class="contact-form" id="contact-form" novalidate>
+      <!-- <form class="contact-form" id="contact-form" novalidate>
         <h3>Send a Message</h3>
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name"
@@ -793,7 +796,7 @@
 
         <button type="submit" class="submit-btn">Send</button>
         <p id="form-status" aria-live="polite"></p>
-      </form>
+      </form> -->
     </section>
 
   </main>
