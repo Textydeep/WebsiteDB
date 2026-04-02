@@ -101,8 +101,8 @@
     }
 
     .avatar {
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       border: 1px solid var(--border);
@@ -111,7 +111,7 @@
 
     .bio-label {
       font-size: 0.68rem;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 1rem;
@@ -147,10 +147,16 @@
     /* ── RESEARCH AREAS ── */
     .research-areas {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
+    }
+    
+    @media (max-width: 600px) {
+      .research-areas {
+        grid-template-columns: 1fr;
+      }
     }
 
     .research-area-card {
@@ -464,23 +470,20 @@
         <div class="bio">
           <p class="bio-label">About</p>
           <p>
-            I am a 5th year PhD scholar in Physics at the University of Toronto.
+            I am a 5th year PhD candidate in Physics at the University of Toronto.
             My main interest is geophysical and astrophysical fluid dynamics — I study
             planetary to stellar scale flows using primarily theoretical and computational,
-            and occasionally observational tools through collaborations.
+            and occasionally observational tools through collaborations. Navigating through engineering and physics educational backgrounds,
+            interdisciplinarity lies at the core of my research. In general, I am interested
+            in mathematical modeling of physical phenomena.
           </p>
           <p>
-            Navigating through engineering and physics educational backgrounds,
-            interdisciplinarity lies at the core of my research. I am broadly interested
-            in mathematical modeling of natural phenomena.
-          </p>
-          <p>
-            Outside of research I love biking long distances, cooking nice food,
-            playing some violin, and meeting interesting people.
+            Outside of research I love biking and running, cooking,
+            playing different musical instruments, and human psychology.
           </p>
           <div class="callout">
-            If you are an undergraduate or masters student interested in research,
-            please reach out. Anyone senior and willing to collaborate — likewise.
+            Please feel free to reach out to me about research and science. 
+            I am also currently looking for post-doc opportunities.
           </div>
         </div>
       </div>
