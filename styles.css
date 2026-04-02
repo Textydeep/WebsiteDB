@@ -1,0 +1,353 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2d2d2d;
+  background: #fafaf8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #4a6fa5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Header ===== */
+header {
+  background: #fff;
+  border-bottom: 1px solid #e0ddd7;
+  padding: 2rem 1rem 0;
+}
+
+.header-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.site-name {
+  font-size: 1.8rem;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+  color: #1a1a1a;
+}
+
+.site-tagline {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.2rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ===== Navigation tabs ===== */
+nav {
+  margin-top: 1.4rem;
+  display: flex;
+  gap: 0;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.95rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab-btn:hover {
+  color: #1a1a1a;
+}
+
+.tab-btn.active {
+  color: #1a1a1a;
+  border-bottom: 3px solid #4a6fa5;
+  font-weight: 600;
+}
+
+/* ===== Main content ===== */
+main {
+  flex: 1;
+  max-width: 760px;
+  width: 100%;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+/* Tab visibility */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ===== Home tab ===== */
+.card {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.bio h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.bio p + p {
+  margin-top: 0.8rem;
+}
+
+/* ===== Research tab ===== */
+#research h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+#research h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e5e3de;
+}
+
+.interest-list {
+  list-style: disc;
+  padding-left: 1.4rem;
+  color: #444;
+}
+
+.interest-list li + li {
+  margin-top: 0.3rem;
+}
+
+.pub-list {
+  list-style: decimal;
+  padding-left: 1.4rem;
+}
+
+.pub-list li {
+  margin-bottom: 1.1rem;
+  line-height: 1.6;
+}
+
+.pub-list a {
+  font-size: 0.9rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #e0ddd7;
+  border-radius: 4px;
+  padding: 1.1rem 1.2rem;
+}
+
+.project-card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: #1a1a1a;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.6rem;
+}
+
+.project-card a {
+  font-size: 0.88rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ===== Contact tab ===== */
+#contact h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-bottom: 0.6rem;
+  color: #1a1a1a;
+}
+
+#contact > p {
+  color: #555;
+  margin-bottom: 1.6rem;
+}
+
+.contact-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+
+.contact-table td {
+  padding: 0.5rem 0.6rem;
+  vertical-align: top;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-table .label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  color: #555;
+  width: 140px;
+  white-space: nowrap;
+}
+
+/* Contact form */
+.contact-form h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e5e3de;
+}
+
+.contact-form label {
+  display: block;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #2d2d2d;
+  background: #fff;
+  transition: border-color 0.15s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #4a6fa5;
+}
+
+.submit-btn {
+  margin-top: 1.2rem;
+  padding: 0.55rem 1.6rem;
+  background: #4a6fa5;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.submit-btn:hover {
+  background: #3a5a8f;
+}
+
+#form-status {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #2a7a2a;
+  min-height: 1.4em;
+}
+
+.field-error {
+  display: block;
+  font-size: 0.85rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #b00020;
+  min-height: 1.2em;
+  margin-top: 0.2rem;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #b00020;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.82rem;
+  color: #aaa;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border-top: 1px solid #e0ddd7;
+  background: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 520px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
